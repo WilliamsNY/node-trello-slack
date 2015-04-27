@@ -147,7 +147,7 @@ handlers = {
 				trello.api.get('/1/list/' + newId, function(err, resp){
 					if (err) throw err;
 					nameN = resp.name;
-					var msg = ':arrow_heading_up:' + author + ' moved card <' + card_url + '|' + sanitize(card_name) + '> from list ' + nameO + ' to list ' + nameN;
+					var msg = ':arrow_heading_up: ' + author + ' moved card <' + card_url + '|' + sanitize(card_name) + '> from list ' + nameO + ' to list ' + nameN;
 					notify(cfg.trello.boardChannels[boardId], msg);
 				});
 			});
